@@ -21,8 +21,8 @@ function createClickerDefault() {
                 gps: 1 / 20,
                 /* updates 20 times per second*/
                 name: "Copper Mine",
-                mineOre: "Copper",
-                mineChance: 0.001,
+                mineOre: "copper",
+                mineChance: 0.001 / 20,
                 unlocked: false,
                 domRef: "upgradeOne",
             },
@@ -34,8 +34,8 @@ function createClickerDefault() {
                 gps: 10 / 20,
                 /* updates 20 times per second*/
                 name: "Silver Mine",
-                mineOre: "Silver",
-                mineChance: 0.001,
+                mineOre: "silver",
+                mineChance: 0.001 / 20,
                 unlocked: false,
                 domRef: "upgradeTwo",
             },
@@ -47,8 +47,8 @@ function createClickerDefault() {
                 gps: 100 / 20,
                 /* updates 20 times per second*/
                 name: "Gold Mine",
-                mineOre: "Gold",
-                mineChance: 0.001,
+                mineOre: "gold",
+                mineChance: 0.001 / 20,
                 unlocked: false,
                 domRef: "upgradeThree",
             },
@@ -104,6 +104,12 @@ function createClickerDefault() {
                 icon: '<i class="fas fa-hard-hat"></i>',
             }
         },
+        materials: {
+
+            copper: 0,
+            silver: 0,
+            gold: 0,
+        },
     }
 }
 
@@ -137,7 +143,7 @@ function updateUI(id) {
     document.getElementById("goldPerSecond").innerHTML = clicker.goldPerSecond;
     document.getElementById(id + 'Name').innerHTML = clicker.upgrades[id].name;
     document.getElementById(id + 'Gps').innerHTML = "Gold per second: " + clicker.upgrades[id].gps * 20;
-    document.getElementById(id + 'MineChance').innerHTML = clicker.upgrades[id].mineOre + " mine chance: " + clicker.upgrades[id].mineChance + "%";
+    document.getElementById(id + 'MineChance').innerHTML = clicker.upgrades[id].mineOre + " mine chance: " + clicker.upgrades[id].mineChance * 20 + "%";
     document.getElementById(id + 'Amount').innerHTML = "Amount: " + clicker.upgrades[id].amount;
     document.getElementById(id + 'Price').innerHTML = "Price: " + numberformat.formatShort(Number(clicker.upgrades[id].price));
 }
@@ -213,7 +219,6 @@ function unlockUpgrades() {
         if (clicker.gold >= clicker.upgrades[i].price && !clicker.upgrades[i].unlocked) {
 
             domRef.classList.remove("upgrade-opacity");
-            console.log(domRef);
             clicker.upgrades[i].unlocked = true;
         } else if (!clicker.upgrades[i].unlocked && clicker.gold < clicker.upgrades[i].price) {
 
@@ -230,6 +235,7 @@ function gameUpdate() {
         unlockUpgrades();
         saveGame();
         checkAchievements();
+        gatherMaterials();
     }, 50);
 
     loadGame();
