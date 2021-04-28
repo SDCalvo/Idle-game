@@ -7,7 +7,7 @@ function gatherMaterials() {
 
     for (i in upgrades) {
 
-        if (upgrades[i].unlocked) {
+        if (upgrades[i].amount > 0) {
 
             if (upgrades[i].mineChance > rng) {
 
