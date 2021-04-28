@@ -102,6 +102,14 @@ html {
 
 /*Stats header*/
 
+@media screen and (max-width: 992px) {
+    .small-alignment {
+        text-align: center !important;
+        align-items: stretch !important;
+        margin: 10px 0px !important;
+    }
+}
+
 .button-mine {
     height: 70px;
     width: auto;
