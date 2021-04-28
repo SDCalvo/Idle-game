@@ -214,6 +214,7 @@ function loadGame() {
 
             var domRef = document.getElementById(clicker.upgrades[i].domRef);
             domRef.classList.remove("upgrade-opacity");
+            domRef.classList.add("size-animation");
         }
     }
 }
@@ -229,10 +230,12 @@ function unlockUpgrades() {
         if (clicker.gold >= clicker.upgrades[i].price && !clicker.upgrades[i].unlocked) {
 
             domRef.classList.remove("upgrade-opacity");
+            domRef.classList.add("size-animation");
             clicker.upgrades[i].unlocked = true;
         } else if (!clicker.upgrades[i].unlocked && clicker.gold < clicker.upgrades[i].price) {
 
             domRef.classList.add("upgrade-opacity");
+            domRef.classList.remove("size-animation");
         }
     }
 }

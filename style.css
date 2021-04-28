@@ -201,6 +201,24 @@ button.btn-sheen:active::after {
     transition: opacity 0.5s;
 }
 
+.size-animation {
+    animation: size 500ms forwards;
+}
+
+@keyframes size {
+    0% {
+        transform: scale(0);
+        filter: drop-shadow(0px 0px 50px var(--color2));
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0px 0px 0px var(--color2));
+    }
+}
+
 
 /* Achievement */
 
