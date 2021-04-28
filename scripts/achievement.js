@@ -1,5 +1,7 @@
 var achievModalFillDone = false; //flag for filling modal achievement
 
+//Show achievements
+
 function achievementUnlocked(title, description) {
 
     let achievContainer = document.getElementById("achievementContainer");
@@ -26,8 +28,6 @@ function achievementUnlocked(title, description) {
 }
 
 /* Gold achievements */
-
-/* 10 gold */
 
 function poorMan() {
 
@@ -58,6 +58,8 @@ function gettingBy() {
         achievementUnlocked(clicker.achievements.gettingBy.title, clicker.achievements.gettingBy.description);
     }
 }
+
+/* Upgrades achievements */
 
 function noobMiner() {
 
@@ -103,7 +105,7 @@ function achDebbug() {
 }
 
 
-/* Update Function */
+/* Achievements Update Function */
 
 function checkAchievements() {
 
@@ -183,14 +185,3 @@ function closeAchievModal() {
     achievCover.classList.remove("cover");
     emptyAchievModal();
 }
-
-/*document.addEventListener(
-    "click",
-    function(event) {
-        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-        if (!event.target.closest(".achiev-modal-container")) {
-            closeAchievModal()
-        }
-    },
-    false
-)*/
