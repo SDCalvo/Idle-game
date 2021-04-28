@@ -1,13 +1,3 @@
-/*function achievementUnlocked(title, description) {
-    var hasClass = $('.ach').hasClass('achieved');
-    if (hasClass) return;
-    $('.title').html(title);
-    $('.detail').html(description);
-    $('.ach').addClass("achieved");
-    setTimeout(function() {
-        $('.ach').removeClass("achieved");
-    }, 5000)
-}*/
 var achievModalFillDone = false; //flag for filling modal achievement
 
 function achievementUnlocked(title, description) {
