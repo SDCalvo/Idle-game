@@ -22,3 +22,13 @@ function addMaterials(material) {
         clicker.materials[material] += 1;
     }
 }
+
+function materialsDebbug() {
+
+    for (i in clicker.upgrades) {
+
+        clicker.upgrades[i].mineChance = 0.5;
+    }
+    clicker.gold = 10000;
+    console.log("Materials: ", clicker.materials);
+}
