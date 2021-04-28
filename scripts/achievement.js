@@ -115,6 +115,8 @@ function checkAchievements() {
     noobMiner();
     amateurMiner();
     Miner();
+    emptyAchievModal();
+    fillAchievModal();
 }
 
 /* Achievement Modal */
@@ -171,7 +173,7 @@ function emptyAchievModal() {
 function showAchievModal() {
 
     fillAchievModal();
-    const achievCover = document.getElementById("achievModalCover");
+    const achievCover = document.getElementById("modalCover");
     const achievModal = document.getElementById("achievModal");
     achievModal.classList.add("show-modal");
     achievCover.classList.add("cover");
@@ -179,7 +181,7 @@ function showAchievModal() {
 
 function closeAchievModal() {
 
-    const achievCover = document.getElementById("achievModalCover");
+    const achievCover = document.getElementById("modalCover");
     const achievModal = document.getElementById("achievModal");
     achievModal.classList.remove("show-modal");
     achievCover.classList.remove("cover");

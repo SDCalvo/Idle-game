@@ -106,9 +106,24 @@ function createClickerDefault() {
         },
         materials: {
 
-            copper: 0,
-            silver: 0,
-            gold: 0,
+            copper: {
+
+                amount: 0,
+                description: "'The first metal to ever being worked by man, it has a redish distinctive color.'",
+                name: "Copper",
+            },
+            silver: {
+
+                amount: 0,
+                description: "'asd'",
+                name: "Silver",
+            },
+            gold: {
+
+                amount: 0,
+                description: "'asd'",
+                name: "Gold",
+            }
         },
     }
 }

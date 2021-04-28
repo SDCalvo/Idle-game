@@ -152,29 +152,43 @@
     </div>
 
     <!--Materials Modal-->
-    <div class="container bg-2 rounded">
-        <div class="row justify-content-center align-items-center">
+    <div id="materialsModal" class="container position-fixed bg-2 text-center rounded modal-position modal-borders modal-container">
+        <div class="row justify-content-center align-items-center text-center mt-3">
 
-            <div class="col-12">
+            <div class="col-11">
+                <h1 class="color-1 bg-4 rounded py-2 fw-bold">Materials</h1>
+            </div>
+            <div class="col-1">
+                <button onclick="closeMaterialsModal()" class="py-2 btn bg-4 btn-shadow btn-hover btn-sheen d-flex justify-content-center align-items-center">
+                    <i class="far fa-times-circle color-1 fa-2x"></i>
+                </button>
+            </div>
 
+            <div class="col-12 my-3 ">
+                <div id="materialsContainer" class="row rounded p-3 justify-content-start flex-wrap align-items-center">
+
+
+                    <!--Materials code is added here-->
+
+
+                </div>
             </div>
 
         </div>
     </div>
 
     <!--Cover the screen on black opacity when modal is opened-->
-    <div id="achievModalCover" class=""></div>
+    <div id="modalCover" class=""></div>
 
     <!--Debbug Tools-->
 
-    <div class="container bg-4 rounded">
-        <div class="row justify-content-center align-items-center">
+    <div class="container bg-4 rounded my-5">
+        <div class="row justify-content-center align-items-center p-2">
             <div class="col-12 text-center">
                 <h1 class="color-1">Debbug Tools</h1>
             </div>
-            <div class="col-2 d-flex justify-content-center align-items-center"><button onclick="showAchievModal()" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">Show Modal</button></div>
-            <div class="col-2 d-flex justify-content-center align-items-center"><button onclick="fillAchievModal()" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">modal fill</button></div>
-            <div class="col-2 d-flex justify-content-center align-items-center"><button onclick="emptyAchievModal()" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">modal empty</button></div>
+            <div class="col-2 d-flex justify-content-center align-items-center"><button onclick="showAchievModal()" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">Achievements</button></div>
+            <div class="col-2 d-flex justify-content-center align-items-center"><button onclick="showMaterialsModal()" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">Materials</button></div>
             <div class="col-2 d-flex justify-content-center align-items-center"><button onclick="gameReset()" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">reset game</button></div>
             <div class="col-2 d-flex justify-content-center align-items-center"><button onclick="achDebbug()" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">Call achievements</button></div>
             <div class="col-2 d-flex justify-content-center align-items-center"><button onclick="materialsDebbug()" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">Materials</button></div>
