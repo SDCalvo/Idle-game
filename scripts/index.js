@@ -115,7 +115,7 @@ function createClickerDefault() {
 
 let clicker = createClickerDefault();
 
-
+/* Pickaxe button */
 function pickaxeRotate() {
 
     pickaxeElem.classList.remove('button-pickaxe-rotate');
@@ -127,6 +127,8 @@ function mine() {
     ++clicker.gold;
     pickaxeRotate();
 }
+
+/* Update functions */
 
 function goldUpdate() {
 
@@ -148,6 +150,8 @@ function updateUI(id) {
     document.getElementById(id + 'Price').innerHTML = "Price: " + numberformat.formatShort(Number(clicker.upgrades[id].price));
 }
 
+// Buy function
+
 function buy(id) {
 
     if (clicker.gold >= clicker.upgrades[id].price) {
@@ -161,6 +165,8 @@ function buy(id) {
     }
 }
 
+//reset game function
+
 function gameReset() {
 
     clicker = createClickerDefault();
@@ -171,6 +177,8 @@ function gameReset() {
         clicker.upgrades[i].unlocked = false;
     }
 }
+
+//Load and Save
 
 function saveGame() {
 
@@ -210,6 +218,8 @@ function loadGame() {
     }
 }
 
+//Make upgrades visible
+
 function unlockUpgrades() {
 
     for (i in clicker.upgrades) {
@@ -226,6 +236,8 @@ function unlockUpgrades() {
         }
     }
 }
+
+//Game Update
 
 function gameUpdate() {
 

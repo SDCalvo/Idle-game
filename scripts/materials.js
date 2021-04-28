@@ -1,3 +1,5 @@
+//Gather materials function
+
 function gatherMaterials() {
 
     let upgrades = clicker.upgrades
@@ -15,6 +17,8 @@ function gatherMaterials() {
         }
     }
 }
+
+//Add material to the materials count inside clicker
 
 function addMaterials(material) {
 
