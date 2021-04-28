@@ -1,0 +1,540 @@
+/* General settings */
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+
+/* Colors */
+
+:root {
+    --color1: #ffc300;
+    --color2: #ff5733;
+    --color3: #c70039;
+    --color4: #900c3e;
+    --color5: #571845;
+    --color6: #4c4c4c;
+    --color7: #848484;
+    --color8: #bcbcbc;
+    --color9: #dddddd;
+}
+
+.color-1 {
+    color: var(--color1) !important;
+}
+
+.color-2 {
+    color: var(--color2) !important;
+}
+
+.color-3 {
+    color: var(--color3) !important;
+}
+
+.color-4 {
+    color: var(--color4) !important;
+}
+
+.color-5 {
+    color: var(--color5) !important;
+}
+
+.color-6 {
+    color: var(--color6) !important;
+}
+
+.color-7 {
+    color: var(--color7) !important;
+}
+
+.color-8 {
+    color: var(--color8) !important;
+}
+
+.color-9 {
+    color: var(--color9) !important;
+}
+
+.bg-1 {
+    background-color: var(--color1) !important;
+}
+
+.bg-2 {
+    background-color: var(--color2) !important;
+}
+
+.bg-3 {
+    background-color: var(--color3) !important;
+}
+
+.bg-4 {
+    background-color: var(--color4) !important;
+}
+
+.bg-5 {
+    background-color: var(--color5) !important;
+}
+
+.bg-6 {
+    background-color: var(--color6) !important;
+}
+
+.bg-7 {
+    background-color: var(--color7) !important;
+}
+
+.bg-8 {
+    background-color: var(--color8) !important;
+}
+
+.bg-9 {
+    background-color: var(--color9) !important;
+}
+
+
+/*Stats header*/
+
+.button-mine {
+    height: 70px;
+    width: auto;
+    padding: 15px;
+    transform-origin: 60% 60%;
+}
+
+.button-pickaxe-rotate {
+    animation: pickaxeAnim 0.4s;
+}
+
+@keyframes pickaxeAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* buttons */
+
+button:focus,
+button:active {
+    box-shadow: none !important;
+}
+
+button {
+    border-radius: 5px !important;
+}
+
+.btn-shadow {
+    transition: ease-in !important;
+    transition-duration: 0.4s !important;
+}
+
+.btn-shadow:hover {
+    box-shadow: 0 25px 20px 0 rgba(0, 0, 0, .16), 0 -1px 2px 0 rgba(0, 0, 0, .1) !important;
+}
+
+.btn-hover {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-hover:hover {
+    /*background-color: #dfcb5e !important;*/
+    filter: brightness(1.3);
+}
+
+button.btn-sheen::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -60%;
+    bottom: -50%;
+    left: -60%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-20%, 200%);
+}
+
+button.btn-sheen {
+    position: relative;
+    overflow: hidden;
+    line-height: 32px;
+}
+
+button.btn-sheen:hover::after,
+button.btn-sheen:focus::after,
+button.btn-sheen:active::after {
+    animation: sheen 1s forwards;
+}
+
+@keyframes sheen {
+    100% {
+        transform: rotateZ(60deg) translate(0%, -200%);
+    }
+}
+
+
+/* Upgrades */
+
+.upgrade-border {
+    border: 2px solid black;
+}
+
+.upgrade {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.upgrade-opacity {
+    opacity: 0 !important;
+    transition: opacity 0.5s;
+}
+
+
+/* Achievement */
+
+#achievementContainer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+}
+
+.ach {
+    background: var(--color4);
+    border: 2px solid var(--color1);
+    position: relative;
+    display: block;
+    opacity: 0;
+    width: 350px;
+    height: 65px;
+    margin-left: -175px;
+    color: var(--color1);
+    font-size: 16px;
+    padding: 0 1.2em 0 0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.ach .icon {
+    float: left;
+    font-size: 2.2em;
+    width: 65px;
+    padding: 0.1em 0 0;
+    text-align: center;
+}
+
+.ach .text_wrap {
+    position: absolute;
+    left: 65px;
+    width: 250px;
+    top: 0.7em;
+    overflow: hidden;
+}
+
+.ach .title {
+    font-size: 0.9em;
+    width: 260px;
+    margin: 0 0 -0.2em;
+    padding: 0;
+}
+
+.ach .detail {
+    font-size: 0.7em;
+    width: 260px;
+    margin: 0;
+    color: var(--color1);
+    font-style: italic;
+}
+
+.ach {
+    -webkit-transition: all .1s ease-out;
+    -moz-transition: all .1s ease-out;
+    -o-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+}
+
+@keyframes ach_in_anim {
+    0% {
+        bottom: -5em;
+        width: 65px;
+        margin-left: -32.5px;
+        border-radius: 50%;
+    }
+    15% {
+        bottom: 2.2em;
+        width: 65px;
+        margin-left: -32.5px;
+    }
+    25% {
+        bottom: 1em;
+        width: 65px;
+        margin-left: -32.5px;
+    }
+    75% {
+        bottom: 1em;
+        width: 65px;
+        margin-left: -32.5px;
+    }
+    85% {
+        bottom: 1em;
+        width: 65px;
+        margin-left: -32.5px;
+        border-radius: 50%;
+    }
+    92% {
+        bottom: 1em;
+        width: 380px;
+        margin-left: -190px;
+        border-radius: 0;
+    }
+    100% {
+        bottom: 1em;
+        width: 350px;
+        margin-left: -175px;
+        border-radius: 0;
+    }
+}
+
+@keyframes ach_current {
+    0% {
+        bottom: 1em;
+        width: 350px;
+        margin-left: -175px;
+    }
+    100% {
+        bottom: 1em;
+        width: 350px;
+        margin-left: -175px;
+    }
+}
+
+@keyframes ach_out_anim {
+    0% {
+        bottom: 1em;
+        width: 350px;
+        margin-left: -175px;
+        border-radius: 50%;
+    }
+    16% {
+        bottom: 1em;
+        width: 65px;
+        margin-left: -32.5px;
+        border-radius: 50%;
+    }
+    20% {
+        bottom: 1em;
+        width: 50px;
+        margin-left: -25px;
+    }
+    34% {
+        bottom: 1em;
+        width: 65px;
+        margin-left: -32.5px;
+    }
+    70% {
+        bottom: 1em;
+        width: 65px;
+        margin-left: -32.5px;
+    }
+    100% {
+        bottom: -5em;
+        width: 65px;
+        margin-left: -32.5px;
+        border-radius: 50%;
+    }
+}
+
+.achieved {
+    animation: ach_in_anim 1.4s, ach_current 3s, ach_out_anim 0.8s;
+    animation-delay: 0s, 1.4s, 4.4s;
+    opacity: 1;
+}
+
+@keyframes i_in_anim {
+    0% {
+        transform: scale(0);
+    }
+    45% {
+        transform: scale(0)
+    }
+    46% {
+        transform: scale(0.4)
+    }
+    50% {
+        transform: scale(1);
+    }
+    55% {
+        transform: scale(1.2);
+    }
+    60% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes i_current {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes i_out_anim {
+    0% {
+        transform: scale(1);
+    }
+    46% {
+        transform: scale(1);
+    }
+    47% {
+        transform: scale(1.2);
+    }
+    56% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(0.4)
+    }
+    65% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.achieved .icon i {
+    animation: i_in_anim 1.4s, i_current 3s, i_out_anim 0.8s;
+    animation-delay: 0s, 1.4s, 4.4s;
+}
+
+@keyframes text_in_anim {
+    0% {
+        width: 0;
+    }
+    85% {
+        width: 0;
+    }
+    100% {
+        width: 260px;
+    }
+}
+
+@keyframes text_out_anim {
+    0% {
+        width: 260px;
+    }
+    12% {
+        width: 0;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+.achieved .text_wrap {
+    animation: text_in_anim 1.4s, text_out_anim 0.8s;
+    animation-delay: 0s, 4.4s;
+}
+
+
+/* Achievements Modal */
+
+.achModal {
+    background: var(--color4);
+    border: 2px solid var(--color1);
+    position: relative;
+    display: block;
+    opacity: 1;
+    width: 350px;
+    height: 65px;
+    color: var(--color1);
+    font-size: 16px;
+    padding: 0 1.2em 0 0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.achModal .icon {
+    float: left;
+    font-size: 2.2em;
+    width: 65px;
+    padding: 0.1em 0 0;
+    text-align: center;
+}
+
+.achModal .text_wrap {
+    position: absolute;
+    left: 65px;
+    width: 250px;
+    top: 0.7em;
+    overflow: hidden;
+}
+
+.achModal .title {
+    font-size: 0.9em;
+    width: 260px;
+    margin: 0 0 -0.2em;
+    padding: 0;
+}
+
+.achModal .detail {
+    font-size: 0.7em;
+    width: 260px;
+    margin: 0;
+    color: var(--color1);
+    font-style: italic;
+}
+
+.modal-position {
+    top: 20%;
+    left: 50%;
+}
+
+.achiev-modal-borders {
+    border: 3px solid var(--color1);
+}
+
+.achiev-modal-container {
+    transform: scale(0) translateX(-50%);
+    transition: all 300ms ease-in-out;
+    z-index: 2;
+}
+
+.show-modal {
+    transform: scale(1) translateX(-50%);
+}
+
+.cover {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.debug {
+    z-index: 23;
+}
