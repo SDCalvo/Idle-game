@@ -58,7 +58,7 @@ function fillMaterialsModal() {
                 var formatedQuantity = numberformat.formatShort(Number(clicker.materials[i].amount));
                 material.innerHTML = `<div class="col-3 modal-text"><img class="img-rounded" src="https://via.placeholder.com/128x64" alt=""></div>
                         <div class="col-3 modal-text">${clicker.materials[i].name}</div>
-                        <div id="materialsAmount" class="col-3 modal-text">Cantidad: ${formatedQuantity}</div>
+                        <div class="col-3 modal-text">Cantidad: ${formatedQuantity}</div>
                         <div class="col-3">${clicker.materials[i].description}</div>`
             } else {
 
