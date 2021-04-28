@@ -508,11 +508,11 @@ button.btn-sheen:active::after {
     left: 50%;
 }
 
-.achiev-modal-borders {
+.modal-borders {
     border: 3px solid var(--color1);
 }
 
-.achiev-modal-container {
+.modal-container {
     transform: scale(0) translateX(-50%);
     transition: all 300ms ease-in-out;
     z-index: 2;
