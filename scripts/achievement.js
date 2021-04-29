@@ -129,7 +129,7 @@ function fillAchievModal() {
         for (i in clicker.achievements) {
 
             const achiev = document.createElement("div");
-            achiev.classList.add("col-4", "d-flex", "justify-content-center", "p-0")
+            achiev.classList.add("col-12", "col-lg-4", "d-flex", "justify-content-center", "p-0");
             if (clicker.achievements[i].unlocked === true) {
 
                 achiev.innerHTML = `
