@@ -52,24 +52,36 @@ function fillMaterialsModal() {
         for (i in clicker.materials) {
 
             const material = document.createElement("div");
-            material.classList.add("col-12", "p-3", "d-flex", "bg-4", "rounded", "color-1", "justify-content-center", "align-items-center", "my-2")
+            material.classList.add("row", "justify-content-center", "align-items-center");
             if (clicker.materials[i].amount >= 1) {
 
                 var formatedQuantity = numberformat.formatShort(Number(clicker.materials[i].amount));
-                material.innerHTML = `<div class="col-3 modal-text"><img class="img-rounded" src="https://via.placeholder.com/128x64" alt=""></div>
-                        <div class="col-3 modal-text">${clicker.materials[i].name}</div>
-                        <div class="col-3 modal-text">Cantidad: ${formatedQuantity}</div>
-                        <div class="col-3">${clicker.materials[i].description}</div>`
+                material.innerHTML = `
+                    <div class="col-12 color-1">        
+                        <div class="row bg-4 m-2 p-4 rounded align-items-center justify-content-center">
+                            <div class="col-lg-3 col-12 modal-text text-center"><img class="img-rounded" src="https://via.placeholder.com/128x80" alt=""></div>
+                            <div class="col-lg-3 col-12 modal-text text-center">${clicker.materials[i].name}</div>
+                            <div class="col-12 col-lg-3 modal-text text-center">Cantidad: ${formatedQuantity}</div>
+                            <div class="col-12 col-lg-3 text-break text-center">${clicker.materials[i].description}</div>
+                        </div>
+                    </div>
+                `
             } else {
 
                 material.innerHTML = `
-                <div class="achModal">
-                <div class="icon"><i class="fas fa-lock"></i></i></div>
-                <div class="text_wrap fw-bold">
-                    <p class="title ">Material locked</p>
-                    <span class="detail">You haven't got this Material yet!</span>
-                </div>
-                </div>`
+
+                <div class="col-12 color-1">        
+                        <div class="row bg-4 m-2 p-4 rounded align-items-center justify-content-center">
+                            <div class="achModal mt-2">
+                                <div class="icon"><i class="fas fa-lock"></i></i></div>
+                                <div class="text_wrap fw-bold">
+                                    <p class="title ">Material locked</p>
+                                    <span class="detail">You haven't got this Material yet!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
             }
 
             materialsModal.appendChild(material);
@@ -78,6 +90,7 @@ function fillMaterialsModal() {
         materialsModalFillDone = true;
     }
 }
+
 
 function emptyMaterialsModal() {
 
