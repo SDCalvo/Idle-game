@@ -91,6 +91,37 @@ function Miner() {
     }
 }
 
+/* Ore achievements */
+
+function copperDigger() {
+
+    if (!clicker.achievements.copperDigger.unlocked && clicker.materials.copper.amount >= 1) {
+
+        clicker.achievements.copperDigger.unlocked = true;
+        clicker.achievementsUnlocked++;
+        achievementUnlocked(clicker.achievements.copperDigger.title, clicker.achievements.copperDigger.description);
+    }
+}
+
+function silverDigger() {
+
+    if (!clicker.achievements.silverDigger.unlocked && clicker.materials.silver.amount >= 1) {
+
+        clicker.achievements.silverDigger.unlocked = true;
+        clicker.achievementsUnlocked++;
+        achievementUnlocked(clicker.achievements.silverDigger.title, clicker.achievements.silverDigger.description);
+    }
+}
+
+function goldDigger() {
+
+    if (!clicker.achievements.goldDigger.unlocked && clicker.materials.gold.amount >= 1) {
+
+        clicker.achievements.goldDigger.unlocked = true;
+        clicker.achievementsUnlocked++;
+        achievementUnlocked(clicker.achievements.goldDigger.title, clicker.achievements.goldDigger.description);
+    }
+}
 
 function achDebbug() {
 
@@ -117,6 +148,9 @@ function checkAchievements() {
     Miner();
     emptyAchievModal();
     fillAchievModal();
+    copperDigger();
+    silverDigger();
+    goldDigger();
 }
 
 /* Achievement Modal */

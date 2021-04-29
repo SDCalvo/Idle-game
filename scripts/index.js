@@ -102,26 +102,50 @@ function createClickerDefault() {
                 description: "Cool! Now you are a proper miner",
                 feat: "Getting your first Gold mine",
                 icon: '<i class="fas fa-hard-hat"></i>',
-            }
+            },
+            copperDigger: {
+
+                unlocked: false,
+                title: "Copper Digger",
+                description: "What a weird kind of gold this is...",
+                feat: "Getting your first Copper ore.",
+                icon: '<i class="far fa-gem"></i>',
+            },
+            silverDigger: {
+
+                unlocked: false,
+                title: "Silver Digger",
+                description: "Great for making a very toxic ring!",
+                feat: "Getting your first Silver ore.",
+                icon: '<i class="far fa-gem"></i>',
+            },
+            goldDigger: {
+
+                unlocked: false,
+                title: "Gold Digger",
+                description: "You could make a pretty collar with this!",
+                feat: "Getting your first Gold ore.",
+                icon: '<i class="far fa-gem"></i>',
+            },
         },
         materials: {
 
             copper: {
 
                 amount: 0,
-                description: "'The first metal to ever being worked by man, it has a redish distinctive color.'",
+                description: "'The first metal to ever being worked by man, it has a distinctive redish color.'",
                 name: "Copper",
             },
             silver: {
 
                 amount: 0,
-                description: "'asd'",
+                description: "'One of the first metals to ever be discovered. Great for scaring werewolves... if only they existed'",
                 name: "Silver",
             },
             gold: {
 
                 amount: 0,
-                description: "'asd'",
+                description: "'A very noble metal, not only because it's very unreactive but also because nobles love it!'",
                 name: "Gold",
             }
         },
