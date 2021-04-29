@@ -61,7 +61,7 @@ function fillMaterialsModal() {
                         <div class="row bg-4 m-2 p-4 rounded align-items-center justify-content-center">
                             <div class="col-lg-3 col-12 modal-text text-center"><img class="img-rounded" src="https://via.placeholder.com/128x80" alt=""></div>
                             <div class="col-lg-3 col-12 modal-text text-center">${clicker.materials[i].name}</div>
-                            <div class="col-12 col-lg-3 modal-text text-center">Cantidad: ${formatedQuantity}</div>
+                            <div class="col-12 col-lg-3 modal-text text-center">Amount: ${formatedQuantity}</div>
                             <div class="col-12 col-lg-3 text-break text-center">${clicker.materials[i].description}</div>
                         </div>
                     </div>
