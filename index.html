@@ -36,7 +36,10 @@
 
                 <div class="col-lg-4 col-sm-12 small-alignment d-flex flex-column justify-content-center align-items-lg-end">
                     <button class="btn mb-2 btn-shadow btn-hover btn-sheen bg-2 color-1"><i class="fas fa-cog fa-3x"></i></button>
-                    <button class="btn btn-shadow btn-hover btn-sheen bg-2 color-1">Materials</button>
+                    <div class="row w-100 align-items-center justify-content-end">
+                        <button onclick="showMaterialsModal()" class="col-4 mx-2 btn btn-shadow btn-hover btn-sheen bg-2 color-1">Materials</button>
+                        <button onclick="showAchievModal()" class="col-4 mx-2 btn btn-shadow btn-hover btn-sheen bg-2 color-1">Achievements</button>
+                    </div>
                     <!--Config-->
                 </div>
             </div>
@@ -189,7 +192,7 @@
                 <h1 class="color-1">Debbug Tools</h1>
             </div>
             <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center"><button onclick="showAchievModal()" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">Achievements</button></div>
-            <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center"><button onclick="showMaterialsModal()" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">Materials</button></div>
+            <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center"><button onclick="" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">Materials</button></div>
             <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center"><button onclick="gameReset()" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">reset game</button></div>
             <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center"><button onclick="achDebbug()" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">Call achievements</button></div>
             <div class="col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center"><button onclick="materialsDebbug()" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold">Materials debbug</button></div>
