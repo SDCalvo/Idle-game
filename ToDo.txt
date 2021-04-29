@@ -8,3 +8,6 @@ Add perma upgrades on ascension bought with materials.
 
 Add images.
 
+Add materials achievements.
+
+Add materials descriptions.
