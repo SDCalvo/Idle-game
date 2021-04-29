@@ -108,6 +108,9 @@ html {
         align-items: stretch !important;
         margin: 10px 0px !important;
     }
+    .small-img {
+        width: 300px;
+    }
 }
 
 .button-mine {
