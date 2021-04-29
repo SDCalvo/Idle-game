@@ -1,13 +1,7 @@
-Finish the materials Modal.
-
-Add responsive.
+Add responsive. (done so far)
 
 Add ascension.
 
 Add perma upgrades on ascension bought with materials.
 
 Add images.
-
-Add materials achievements.
-
-Add materials descriptions.
