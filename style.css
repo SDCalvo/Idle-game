@@ -111,6 +111,14 @@ html {
     .small-img {
         width: 300px;
     }
+    .pos-modal-small {
+        top: 0 !important;
+        bottom: 0 !important;
+        overflow-y: scroll !important;
+    }
+    .pos-modal-small::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .button-mine {
@@ -501,6 +509,10 @@ button.btn-sheen:active::after {
     margin-bottom: 1rem;
 }
 
+.achWidth {
+    width: 50% !important;
+}
+
 .achModal .icon {
     float: left;
     font-size: 2.2em;
@@ -580,4 +592,14 @@ button.btn-sheen:active::after {
 
 .debug {
     z-index: 23;
+}
+
+.materials-padding {
+    padding: 1.5rem !important;
+}
+
+@media screen and (max-width: 500px) {
+    .materials-padding {
+        padding: 0px !important;
+    }
 }

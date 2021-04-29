@@ -71,12 +71,14 @@ function fillMaterialsModal() {
                 material.innerHTML = `
 
                 <div class="col-12 color-1">        
-                        <div class="row bg-4 m-2 p-4 rounded align-items-center justify-content-center">
-                            <div class="achModal mt-2">
-                                <div class="icon"><i class="fas fa-lock"></i></i></div>
-                                <div class="text_wrap fw-bold">
-                                    <p class="title ">Material locked</p>
-                                    <span class="detail">You haven't got this Material yet!</span>
+                        <div class="row materials-padding bg-4 m-2 rounded align-items-center justify-content-center">
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                                <div class="achModal text-center mt-2 text-break">
+                                    <div class="icon"><i class="fas fa-lock"></i></i></div>
+                                    <div class="text_wrap fw-bold">
+                                        <p class="title ">Material locked</p>
+                                        <span class="detail">You haven't got this Material yet!</span>
+                                </div>
                                 </div>
                             </div>
                         </div>
