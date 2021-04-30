@@ -1,15 +1,10 @@
 Add responsive. (done so far)
 
-Design ascend mastery tree.
-
-Implement mastery tree.
-
-Implement mastery unlock and buy with materials;
-
 Design UI for ascension;
 
 Add responsive to ascension UI;
 
-Add perma upgrades on ascension bought with materials.
-
 Add images.
+
+Insane mining perk fix (update UI according to the increase of mining chance).
+
