@@ -9,6 +9,7 @@ function createClickerDefault() {
     return {
         gold: 0,
         goldPerSecond: 0,
+        goldPerClick: 1,
         achievementsUnlocked: 0,
 
         upgrades: {
@@ -151,10 +152,98 @@ function createClickerDefault() {
         },
         ascension: {
 
+            unlocked: false,
+            perks: {
 
+                clickOverdrive: {
+
+                    name: "Click overdrive",
+                    description: "Doubles gold per click",
+                    unlocked: false,
+                    materialsPrice: {
+
+                        copper: 10,
+                        silver: 5,
+                    },
+                    perksRequired: [],
+                },
+                clickMastery: {
+
+                    name: "Click Mastery",
+                    description: "Adds ten gold per click",
+                    unlocked: false,
+                    materialsPrice: {
+
+                        copper: 5,
+                        silver: 3,
+                        gold: 1,
+                    },
+                    perksRequired: [],
+                },
+                copperMastery: {
+
+                    name: "Copper Mastery",
+                    description: "Copper mines are 10% more efficient",
+                    unlocked: false,
+                    materialsPrice: {
+
+                        copper: 20,
+                    },
+                    perksRequired: ["clickMastery"],
+                },
+                silverMastery: {
+
+                    name: "Silver Mastery",
+                    description: "Silver mines are 10% more efficient",
+                    unlocked: false,
+                    materialsPrice: {
+
+                        silver: 20,
+                    },
+                    perksRequired: ["clickOverdrive"],
+                },
+                goldMastery: {
+
+                    name: "Gold Mastery",
+                    description: "Gold mines are 10% more efficient",
+                    unlocked: false,
+                    materialsPrice: {
+
+                        gold: 20,
+                    },
+                    perksRequired: ["clickOverdrive", "clickMastery"],
+                },
+                achieveGreatness: {
+
+                    name: "Achieve greatness",
+                    description: "Gain 1% gold per second per achievement unlocked",
+                    unlocked: false,
+                    materialsPrice: {
+
+                        copper: 30,
+                        silver: 20,
+                        gold: 20,
+                    },
+                    perksRequired: ["silverMastery", "goldMastery"],
+                },
+                insaneMining: {
+
+                    name: "Insane Mining",
+                    description: "Triple chance of mining ore",
+                    unlocked: false,
+                    materialsPrice: {
+
+                        copper: 25,
+                        silver: 25,
+                        gold: 25,
+                    },
+                    perksRequired: ["copperMastery"],
+                },
+            },
         }
     }
 }
+
 
 let clicker = createClickerDefault();
 
@@ -167,7 +256,7 @@ function pickaxeRotate() {
 
 function mine() {
 
-    ++clicker.gold;
+    clicker.gold += clicker.goldPerClick;
     pickaxeRotate();
 }
 
@@ -175,10 +264,7 @@ function mine() {
 
 function goldUpdate() {
 
-    for (i in clicker.upgrades) {
-
-        clicker.gold += clicker.upgrades[i].amount * clicker.upgrades[i].gps;
-    }
+    clicker.gold += clicker.goldPerSecond / 20;
 
     goldElem.innerHTML = numberformat.format(Number(String(clicker.gold).split(".")[0]));
 }
@@ -187,7 +273,7 @@ function updateUI(id) {
 
     document.getElementById("goldPerSecond").innerHTML = clicker.goldPerSecond;
     document.getElementById(id + 'Name').innerHTML = clicker.upgrades[id].name;
-    document.getElementById(id + 'Gps').innerHTML = "Gold per second: " + clicker.upgrades[id].gps * 20;
+    document.getElementById(id + 'Gps').innerHTML = "Gold per second: " + clicker.upgrades[id].gps * 20 * clicker.upgrades[id].amount;
     document.getElementById(id + 'MineChance').innerHTML = clicker.upgrades[id].mineOre + " mine chance: " + clicker.upgrades[id].mineChance * 20 + "%";
     document.getElementById(id + 'Amount').innerHTML = "Amount: " + clicker.upgrades[id].amount;
     document.getElementById(id + 'Price').innerHTML = "Price: " + numberformat.formatShort(Number(clicker.upgrades[id].price));
@@ -228,16 +314,17 @@ function saveGame() {
     delay++;
     if (delay >= 40) {
 
-        Cookies.set("clicker", JSON.stringify(clicker), { expires: 100000 });
+        localStorage.setItem("clicker", JSON.stringify(clicker));
         delay = 0;
     }
 }
 
 function loadGame() {
 
-    if (Cookies.get("clicker") != null && Cookies.get("clicker") != undefined) {
+    const saveFile = localStorage.getItem("clicker")
+    if (saveFile != null && saveFile != undefined) {
 
-        var clickerCompare = JSON.parse(Cookies.get("clicker"));
+        var clickerCompare = JSON.parse(saveFile);
 
         for (i in clicker.upgrades) {
 
