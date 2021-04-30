@@ -6,5 +6,4 @@ Add responsive to ascension UI;
 
 Add images.
 
-Insane mining perk fix (update UI according to the increase of mining chance).
 

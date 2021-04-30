@@ -9,6 +9,7 @@ function createClickerDefault() {
     return {
         gold: 0,
         goldPerSecond: 0,
+        goldPerClickMultiplier: 1,
         goldPerClick: 1,
         achievementsUnlocked: 0,
 

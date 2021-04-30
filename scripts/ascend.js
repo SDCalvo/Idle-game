@@ -112,7 +112,8 @@ perksEffects = {
         for (i in clicker.upgrades) {
 
             clicker.upgrades[i].mineChance *= 3;
-            updateUI(i); //FIX!!!!!!!!!!!!!!! i dosen't work, argument expected id on html element, it's a string
+            const domRef = clicker.upgrades[i].domRef;
+            updateUI(domRef);
         }
     },
 }
