@@ -1,6 +1,14 @@
 Add responsive. (done so far)
 
-Add ascension.
+Design ascend mastery tree.
+
+Implement mastery tree.
+
+Implement mastery unlock and buy with materials;
+
+Design UI for ascension;
+
+Add responsive to ascension UI;
 
 Add perma upgrades on ascension bought with materials.
 

@@ -149,6 +149,10 @@ function createClickerDefault() {
                 name: "Gold",
             }
         },
+        ascension: {
+
+
+        }
     }
 }
 
