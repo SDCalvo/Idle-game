@@ -617,3 +617,13 @@ button.btn-sheen:active::after {
     height: 100%;
     z-index: 1;
 }
+
+.perkContainer {
+    width: 350px;
+    height: 200px;
+}
+
+.clickOverdrive {
+    top: 10%;
+    left: 20%;
+}

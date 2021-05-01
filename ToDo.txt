@@ -6,4 +6,5 @@ Add responsive to ascension UI;
 
 Add images.
 
+Fix gold per click perk, make sure it multiplies no matter when it is bought.
 
