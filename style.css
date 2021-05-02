@@ -618,12 +618,140 @@ button.btn-sheen:active::after {
     z-index: 1;
 }
 
+.ascension-modal-row {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .perkContainer {
     width: 350px;
     height: 200px;
 }
 
-.clickOverdrive {
+.click-overdrive {
     top: 10%;
     left: 20%;
+}
+
+.zoom {
+    transition: transform 0.26s ease;
+}
+
+.zoom:hover {
+    transition: transform 0.26s ease;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.card-show:hover .display-hide {
+    display: inline-block;
+}
+
+.card-show:hover .card-content-colapse {
+    transform: scaleY(1);
+}
+
+.product-focus-shadow {
+    transition-duration: 0.4s;
+}
+
+.product-focus-shadow:hover {
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .16), 0 -1px 2px 0 rgba(0, 0, 0, .1);
+}
+
+.card-borders-animation:hover .image-borders:before {
+    transform: scale(1, 1);
+}
+
+.card-width {
+    width: 18rem;
+}
+
+.b-radius {
+    border-radius: 0px !important;
+}
+
+.card-img-size {
+    height: 160px !important;
+    width: auto !important;
+}
+
+.image-borders:before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0rem;
+    left: 0.5rem;
+    right: 0.5rem;
+}
+
+.image-borders:before {
+    transform: scale(0, 1);
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    transition: transform ease-out 250ms;
+}
+
+.card-borders-animation:hover .image-borders:before {
+    transform: scale(1, 1);
+}
+
+.card-borders-animation:hover {
+    transform: scale(1, 1);
+}
+
+.card-content-borders {
+    position: relative;
+}
+
+.card-content-borders:before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+}
+
+.card-content-borders:before {
+    transform: scale(0, 1);
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    transition: transform ease-out 250ms;
+}
+
+.card-borders-animation:hover .card-content-borders:before {
+    transform: scale(1, 1);
+}
+
+.card-borders-animation:hover {
+    transform: scale(1, 1);
+}
+
+.card-content-colapse {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.26s ease;
+}
+
+@media screen and (max-width: 1200px) {
+    .card-content-colapse {
+        transform: scaleY(1);
+        transform-origin: top;
+        transition: transform 0.26s ease;
+    }
+}
+
+.card-perk-size {
+    width: 350px !important;
+}
+
+.perk-btn-index {
+    z-index: 3 !important;
 }
