@@ -616,11 +616,24 @@ button.btn-sheen:active::after {
     width: 100%;
     height: 100%;
     z-index: 1;
+    overflow: scroll;
+}
+
+.ascension-modal::-webkit-scrollbar {
+    display: none !important;
+}
+
+.desired-width {
+    width: 1920px;
 }
 
 .perkContainer {
     width: 350px;
     height: 200px;
+}
+
+.margin-top {
+    margin-top: 150px;
 }
 
 .zoom {
