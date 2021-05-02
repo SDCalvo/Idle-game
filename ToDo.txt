@@ -2,9 +2,24 @@ Add responsive. (done so far)
 
 Design UI for ascension;
 
+Add close and open function to perks modal.
+
+Add lines that represent the perks tree.
+
+Add functions to buy buttons.
+
+Add debug function for perks to test.
+
 Add responsive to ascension UI;
 
 Add images.
 
 Fix gold per click perk, make sure it multiplies no matter when it is bought.
 
+
+            
+
+
+
+
+            
