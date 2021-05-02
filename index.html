@@ -189,18 +189,120 @@
     <div id="achievementContainer"></div>
 
     <!--Ascension UI Modal-->
-    <div id="ascensionModal" class="container-fluid bg-5 ascension-modal color-4 fw-bold">
-        <div class="row position-relative ascension-modal-row">
+    <div id="ascensionModal" class="container-fluid bg-5 ascension-modal color-4 fw-bold overflow-scroll">
+        <div class="my-3 text-center">
+            <h1 class="color-1 d-inline">Perks</h1>
+            <div class="d-inline-block float-end">
+                <button onclick="" class="py-2 btn bg-4 btn-shadow btn-hover btn-sheen d-flex justify-content-center align-items-center">
+                    <i class="far fa-times-circle color-1 fa-2x"></i>
+                </button>
+            </div>
+        </div>
 
-            <div class="zoom click-overdrive position-absolute card-show card-perk-size d-flex justify-content-center py-3">
-                <div class="product-focus-shadow card-borders-animation card-width">
-                    <div class="card b-radius d-flex justify-content-center align-items-center border-none">
+        <div class="d-flex position-relative align-items-baseline justify-content-around mt-5">
+
+            <div class="zoom click-overdrive card-show card-perk-size d-flex justify-content-center">
+                <div class="product-focus-shadow color-1 card-borders-animation card-width">
+                    <div class="card bg-3 b-radius d-flex justify-content-center align-items-center border-0 rounded-top">
                         <a class="image-borders"><img src="https://via.placeholder.com/286x160" class="pt-2 card-img-size " alt="... "></a>
-                        <h4 class="color-black ">Titulo</h4>
+                        <h4 class="color-black align-self-stretch bg-4 my-2 p-1 text-center mx-2">"Click Overdrive"</h4>
                     </div>
-                    <div class="bg-white card-body card-content-colapse border-none card-content-borders">
-                        <p class="card-text color-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <button onclick="" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex">Ascend</button>
+                    <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column">
+                        <p class="card-text text-center color-black">Doubles the ammount of gold recived per click</p>
+                        <p class="card-text color-black">Price: 10 copper, 5 silver</p>
+                        <button onclick="" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="zoom click-mastery card-show card-perk-size d-flex justify-content-center">
+                <div class="product-focus-shadow color-1 card-borders-animation card-width">
+                    <div class="card bg-3 b-radius d-flex justify-content-center align-items-center border-0 rounded-top">
+                        <a class="image-borders"><img src="https://via.placeholder.com/286x160" class="pt-2 card-img-size " alt="... "></a>
+                        <h4 class="color-black align-self-stretch bg-4 my-2 p-1 text-center mx-2">"Click Mastery"</h4>
+                    </div>
+                    <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column">
+                        <p class="card-text text-center color-black">Gain an extra ten gold per click</p>
+                        <p class="card-text color-black">Price: 5 copper, 3 silver, 1 gold</p>
+                        <button onclick="" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="d-flex position-relative align-items-baseline justify-content-around">
+
+            <div class="zoom gold-mastery card-show card-perk-size d-flex justify-content-center">
+                <div class="product-focus-shadow color-1 card-borders-animation card-width">
+                    <div class="card bg-3 b-radius d-flex justify-content-center align-items-center border-0 rounded-top">
+                        <a class="image-borders"><img src="https://via.placeholder.com/286x160" class="pt-2 card-img-size " alt="... "></a>
+                        <h4 class="color-black align-self-stretch bg-4 my-2 p-1 text-center mx-2">"Gold Mastery"</h4>
+                    </div>
+                    <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column">
+                        <p class="card-text text-center color-black">Gold mines are 10% more efficient</p>
+                        <p class="card-text color-black">Price: 20 gold</p>
+                        <button onclick="" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="zoom silver-mastery card-show card-perk-size d-flex justify-content-center">
+                <div class="product-focus-shadow color-1 card-borders-animation card-width">
+                    <div class="card bg-3 b-radius d-flex justify-content-center align-items-center border-0 rounded-top">
+                        <a class="image-borders"><img src="https://via.placeholder.com/286x160" class="pt-2 card-img-size " alt="... "></a>
+                        <h4 class="color-black align-self-stretch bg-4 my-2 p-1 text-center mx-2">"Silver Mastery"</h4>
+                    </div>
+                    <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column">
+                        <p class="card-text text-center color-black">Silver mines are 10% more efficient</p>
+                        <p class="card-text color-black">Price: 20 silver</p>
+                        <button onclick="" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="zoom copper-mastery card-show card-perk-size d-flex justify-content-center">
+                <div class="product-focus-shadow color-1 card-borders-animation card-width">
+                    <div class="card bg-3 b-radius d-flex justify-content-center align-items-center border-0 rounded-top">
+                        <a class="image-borders"><img src="https://via.placeholder.com/286x160" class="pt-2 card-img-size " alt="... "></a>
+                        <h4 class="color-black align-self-stretch bg-4 my-2 p-1 text-center mx-2">"Copper Mastery"</h4>
+                    </div>
+                    <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column">
+                        <p class="card-text text-center color-black">Copper mines are 10% more efficient</p>
+                        <p class="card-text color-black">Price: 20 copper</p>
+                        <button onclick="" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="d-flex position-relative align-items-baseline justify-content-around mb-5">
+
+            <div class="zoom click-overdrive card-show card-perk-size d-flex justify-content-center">
+                <div class="product-focus-shadow color-1 card-borders-animation card-width">
+                    <div class="card bg-3 b-radius d-flex justify-content-center align-items-center border-0 rounded-top">
+                        <a class="image-borders"><img src="https://via.placeholder.com/286x160" class="pt-2 card-img-size " alt="... "></a>
+                        <h4 class="color-black align-self-stretch bg-4 my-2 p-1 text-center mx-2">"Achieve greatness"</h4>
+                    </div>
+                    <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column">
+                        <p class="card-text text-center color-black">Gain 1% gold per second for every achievement unlocked</p>
+                        <p class="card-text color-black">Price: 30 copper, 20 silver, 15 gold</p>
+                        <button onclick="" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex">Buy</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="zoom click-mastery card-show card-perk-size d-flex justify-content-center">
+                <div class="product-focus-shadow color-1 card-borders-animation card-width">
+                    <div class="card bg-3 b-radius d-flex justify-content-center align-items-center border-0 rounded-top">
+                        <a class="image-borders"><img src="https://via.placeholder.com/286x160" class="pt-2 card-img-size " alt="... "></a>
+                        <h4 class="color-black align-self-stretch bg-4 my-2 p-1 text-center mx-2">"Insane Mining"</h4>
+                    </div>
+                    <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column">
+                        <p class="card-text text-center color-black">Triples the chance of mining ores</p>
+                        <p class="card-text color-black">Price: 25 copper, 25 silver, 25 gold</p>
+                        <button onclick="" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex">Buy</button>
                     </div>
                 </div>
             </div>

@@ -223,7 +223,7 @@ function createClickerDefault() {
 
                         copper: 30,
                         silver: 20,
-                        gold: 20,
+                        gold: 15,
                     },
                     perksRequired: ["silverMastery", "goldMastery"],
                 },
