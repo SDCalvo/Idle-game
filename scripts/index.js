@@ -201,7 +201,7 @@ function createClickerDefault() {
 
                         silver: 20,
                     },
-                    perksRequired: ["clickOverdrive"],
+                    perksRequired: ["clickMastery"],
                 },
                 goldMastery: {
 
@@ -212,7 +212,7 @@ function createClickerDefault() {
 
                         gold: 20,
                     },
-                    perksRequired: ["clickOverdrive", "clickMastery"],
+                    perksRequired: ["clickOverdrive"],
                 },
                 achieveGreatness: {
 
