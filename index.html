@@ -36,11 +36,14 @@
 
                 <div class="col-lg-4 col-sm-12 small-alignment d-flex flex-column justify-content-center align-items-lg-end">
                     <button class="btn mb-2 btn-shadow btn-hover btn-sheen bg-2 color-1"><i class="fas fa-cog fa-3x"></i></button>
-                    <div class="row w-100 align-items-center justify-content-end">
-                        <button onclick="showMaterialsModal()" class="col-4 mx-2 btn btn-shadow btn-hover btn-sheen bg-2 color-1">Materials</button>
-                        <button onclick="showAchievModal()" class="col-4 mx-2 btn btn-shadow btn-hover btn-sheen bg-2 color-1">Achievements</button>
-                    </div>
                     <!--Config-->
+                </div>
+                <div class="col-12 mt-2 w-100 align-items-center justify-content-end">
+                    <div class="row justify-content-center align-items-center">
+                        <button onclick="showMaterialsModal()" class="col-2 text-center mx-2 btn btn-shadow btn-hover btn-sheen bg-2 color-1">Materials</button>
+                        <button onclick="showAchievModal()" class="col-2 text-center mx-2 btn btn-shadow btn-hover btn-sheen bg-2 color-1">Achievements</button>
+                        <button onclick="showAscensionModal()" class="col-2 text-center mx-2 btn btn-shadow btn-hover btn-sheen bg-2 color-1">Perks</button>
+                    </div>
                 </div>
             </div>
 
@@ -195,7 +198,7 @@
             <div class="bg-3 py-3 text-center fixed-top w-100">
                 <h1 class=" color-1 d-inline ">Perks</h1>
                 <div class="d-inline-block float-end me-3">
-                    <button onclick=" " class="py-2 btn bg-4 btn-shadow btn-hover btn-sheen d-flex justify-content-center align-items-center ">
+                    <button onclick="closeAscensionModal()" class="py-2 btn bg-4 btn-shadow btn-hover btn-sheen d-flex justify-content-center align-items-center ">
                         <i class="far fa-times-circle color-1 fa-2x "></i>
                     </button>
                 </div>

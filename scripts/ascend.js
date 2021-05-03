@@ -69,6 +69,18 @@ function perkDebbug() {
     // console.log("Gold per click: " + clicker.goldPerClick);
 }
 
+function showAscensionModal() {
+
+    const ascensionModal = document.getElementById("ascensionModal");
+    ascensionModal.classList.add('show-ascen-modal');
+}
+
+function closeAscensionModal() {
+
+    const ascensionModal = document.getElementById("ascensionModal");
+    ascensionModal.classList.remove('show-ascen-modal');
+}
+
 //perksFunctions
 
 perksEffects = {

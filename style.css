@@ -616,7 +616,13 @@ button.btn-sheen:active::after {
     width: 100%;
     height: 100%;
     z-index: 1;
+    transform: scale(0);
     overflow: scroll;
+    transition: all 300ms;
+}
+
+.show-ascen-modal {
+    transform: scale(1) !important;
 }
 
 .ascension-modal::-webkit-scrollbar {
