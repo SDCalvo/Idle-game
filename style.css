@@ -769,3 +769,49 @@ button.btn-sheen:active::after {
 .overflow-scroll::-webkit-scrollbar {
     display: none;
 }
+
+.perk-line {
+    width: 4px;
+    height: 400px;
+    position: absolute;
+    z-index: 0;
+    background-color: var(--color1);
+}
+
+.perk-line-one {
+    top: 25%;
+    left: 23%;
+    transform: rotate(20deg);
+}
+
+.perk-line-two {
+    top: 25%;
+    right: 36%;
+    height: 550px !important;
+    transform: rotate(49deg);
+}
+
+.perk-line-three {
+    top: 25%;
+    right: 21%;
+    transform: rotate(-25deg);
+}
+
+.perk-line-four {
+    top: 75%;
+    left: 21%;
+    transform: rotate(-25deg);
+}
+
+.perk-line-five {
+    top: 75%;
+    right: 65%;
+    height: 550px !important;
+    transform: rotate(45deg);
+}
+
+.perk-line-six {
+    top: 75%;
+    right: 21%;
+    transform: rotate(30deg);
+}
