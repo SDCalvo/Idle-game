@@ -58,8 +58,8 @@ function buyPerk(perkObject, perkName) {
     perksEffects[perkName]();
     perkObject.unlocked = true;
 
-    console.log(clicker.upgrades.upgradeOne.gps)
-
+    const perkIcon = document.getElementById(perkName);
+    perkIcon.classList.add("show-perk-bought");
 }
 
 function perkDebbug() {
@@ -121,7 +121,7 @@ perksEffects = {
     },
     achieveGreatness() {
 
-        clicker.goldPerSecond *= (1 * achievementsUnlocked);
+        clicker.goldPerSecond *= (1 * clicker.achievementsUnlocked);
     },
     insaneMining() {
 
