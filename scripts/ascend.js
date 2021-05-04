@@ -19,11 +19,11 @@ function buyPerk(perkObject, perkName) {
     // console.log(perkObject);
     const { materialsPrice, perksRequired } = perkObject;
 
+    console.log("Unlocked: " + perkObject.unlocked)
+
+    if (perkObject.unlocked) return;
+
     for (material in materialsPrice) {
-
-        console.log("Unlocked: " + perkObject.unlocked)
-
-        if (perkObject.unlocked) return;
 
         if (clicker.materials[material].amount < materialsPrice[material]) {
 
