@@ -21,6 +21,10 @@ function buyPerk(perkObject, perkName) {
 
     for (material in materialsPrice) {
 
+        console.log("Unlocked: " + perkObject.unlocked)
+
+        if (perkObject.unlocked) return;
+
         if (clicker.materials[material].amount < materialsPrice[material]) {
 
             console.log("Material validation: " + clicker.materials[material].name + " amount: " + clicker.materials[material].amount);

@@ -779,39 +779,50 @@ button.btn-sheen:active::after {
 }
 
 .perk-line-one {
-    top: 25%;
-    left: 23%;
+    top: 250px;
+    left: 450px;
     transform: rotate(20deg);
 }
 
 .perk-line-two {
-    top: 25%;
-    right: 36%;
+    top: 250px;
+    right: 700px;
     height: 550px !important;
     transform: rotate(49deg);
 }
 
 .perk-line-three {
-    top: 25%;
-    right: 21%;
+    top: 250px;
+    right: 400px;
     transform: rotate(-25deg);
 }
 
 .perk-line-four {
-    top: 75%;
-    left: 21%;
-    transform: rotate(-25deg);
+    top: 800px;
+    left: 430px;
+    transform: rotate(-15deg);
 }
 
 .perk-line-five {
-    top: 75%;
-    right: 65%;
+    top: 700px;
+    right: 1200px;
     height: 550px !important;
     transform: rotate(45deg);
 }
 
 .perk-line-six {
-    top: 75%;
-    right: 21%;
-    transform: rotate(30deg);
+    top: 700px;
+    right: 350px;
+    transform: rotate(15deg);
+}
+
+.perk-bought {
+    font-size: 50px;
+    top: -20px;
+    right: -20px;
+    position: absolute;
+    z-index: 2;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
 }

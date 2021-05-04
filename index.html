@@ -192,7 +192,7 @@
     <div id="achievementContainer"></div>
 
     <!--Ascension UI Modal-->
-    <div id="ascensionModal" class="container-fluid bg-5 ascension-modal color-4 fw-bold">
+    <div id="ascensionModal" class="container-fluid bg-5 p-0 ascension-modal color-4 fw-bold">
         <div class="desired-width">
 
             <div class="perk-line perk-line-one"></div>
@@ -213,7 +213,10 @@
 
             <div class="d-flex position-relative align-items-baseline justify-content-around margin-top">
 
-                <div class="zoom click-overdrive card-show card-perk-size d-flex justify-content-center ">
+                <div class="zoom click-overdrive card-show card-perk-size d-flex justify-content-center position-relative">
+                    <div class="perk-bought color-1 bg-2 d-flex justify-content-center align-items-center">
+                        <i class="far fa-check-circle"></i>
+                    </div>
                     <div class="product-focus-shadow color-1 card-borders-animation card-width ">
                         <div class="card bg-3 b-radius d-flex justify-content-center align-items-center border-0 rounded-top ">
                             <a class="image-borders "><img src="https://via.placeholder.com/286x160 " class="pt-2 card-img-size " alt="... "></a>
@@ -222,7 +225,7 @@
                         <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column ">
                             <p class="card-text text-center color-black ">Doubles the ammount of gold recived per click</p>
                             <p class="card-text color-black ">Price: 10 copper, 5 silver</p>
-                            <button onclick="buyPerk(clicker.ascension.perks.clickOverdrive, 'clickOverdrive')" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
+                            <button onclick="buyPerk(clicker.ascension.perks.clickOverdrive, 'clickOverdrive') " class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
                         </div>
                     </div>
                 </div>
@@ -236,7 +239,7 @@
                         <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column ">
                             <p class="card-text text-center color-black ">Gain an extra ten gold per click</p>
                             <p class="card-text color-black ">Price: 5 copper, 3 silver, 1 gold</p>
-                            <button onclick="buyPerk(clicker.ascension.perks.clickMastery, 'clickMastery')" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
+                            <button onclick="buyPerk(clicker.ascension.perks.clickMastery, 'clickMastery') " class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
                         </div>
                     </div>
                 </div>
@@ -254,7 +257,7 @@
                         <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column ">
                             <p class="card-text text-center color-black ">Gold mines are 10% more efficient</p>
                             <p class="card-text color-black ">Price: 20 gold</p>
-                            <button onclick="buyPerk(clicker.ascension.perks.goldMastery, 'goldMastery')" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
+                            <button onclick="buyPerk(clicker.ascension.perks.goldMastery, 'goldMastery') " class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
                         </div>
                     </div>
                 </div>
@@ -268,7 +271,7 @@
                         <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column ">
                             <p class="card-text text-center color-black ">Silver mines are 10% more efficient</p>
                             <p class="card-text color-black ">Price: 20 silver</p>
-                            <button onclick="buyPerk(clicker.ascension.perks.silverMastery, 'silverMastery')" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
+                            <button onclick="buyPerk(clicker.ascension.perks.silverMastery, 'silverMastery') " class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
                         </div>
                     </div>
                 </div>
@@ -282,7 +285,7 @@
                         <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column ">
                             <p class="card-text text-center color-black ">Copper mines are 10% more efficient</p>
                             <p class="card-text color-black ">Price: 20 copper</p>
-                            <button onclick="buyPerk(clicker.ascension.perks.copperMastery, 'copperMastery')" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
+                            <button onclick="buyPerk(clicker.ascension.perks.copperMastery, 'copperMastery') " class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
                         </div>
                     </div>
                 </div>
@@ -300,7 +303,7 @@
                         <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column ">
                             <p class="card-text text-center color-black ">Gain 1% gold per second for every achievement unlocked</p>
                             <p class="card-text color-black ">Price: 30 copper, 20 silver, 15 gold</p>
-                            <button onclick="buyPerk(clicker.ascension.perks.achieveGreatness, 'achieveGreatness')" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
+                            <button onclick="buyPerk(clicker.ascension.perks.achieveGreatness, 'achieveGreatness') " class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
                         </div>
                     </div>
                 </div>
@@ -314,7 +317,7 @@
                         <div class="bg-3 card-body card-content-colapse border-0 card-content-borders rounded-bottom card-margin-offset d-flex justify-content-center align-items-center flex-column ">
                             <p class="card-text text-center color-black ">Triples the chance of mining ores</p>
                             <p class="card-text color-black ">Price: 25 copper, 25 silver, 25 gold</p>
-                            <button onclick="buyPerk(clicker.ascension.perks.insaneMining, 'insaneMining')" class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
+                            <button onclick="buyPerk(clicker.ascension.perks.insaneMining, 'insaneMining') " class="btn m-2 btn-shadow btn-hover btn-sheen bg-2 color-1 fw-bold perk-btn-zindex ">Buy</button>
                         </div>
                     </div>
                 </div>
