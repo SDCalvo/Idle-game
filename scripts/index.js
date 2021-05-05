@@ -12,6 +12,7 @@ function createClickerDefault() {
         goldPerClickMultiplier: 1,
         goldPerClick: 1,
         achievementsUnlocked: 0,
+        ascendAmount: 100000,
 
         upgrades: {
 
@@ -267,6 +268,14 @@ function goldUpdate() {
 
     clicker.gold += clicker.goldPerSecond / 20;
 
+    if (clicker.gold == clicker.ascendAmount) { //Unlock ascend and perks buttons
+
+        var ascendBtn = document.getElementById("ascend-btn"),
+            perksBtn = document.getElementById("perks-btn");
+
+        ascendBtn.classList.add("show-ascen-btn");
+        perksBtn.classList.add("show-ascen-btn");
+    }
     goldElem.innerHTML = numberformat.format(Number(String(clicker.gold).split(".")[0]));
 }
 

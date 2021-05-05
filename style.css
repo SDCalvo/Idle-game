@@ -844,3 +844,12 @@ button.btn-sheen:active::after {
         transform: scale(1);
     }
 }
+
+.hide-ascen-btn {
+    display: none !important;
+}
+
+.show-ascen-btn {
+    display: inline-block !important;
+    animation: perk-bought 300ms ease-in;
+}
