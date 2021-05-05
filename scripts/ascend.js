@@ -5,7 +5,6 @@ function ascend() {
     const { materials, achievements, achievementsUnlocked, ascension } = clicker;
     clicker = {...createClickerDefault(), materials, achievements, achievementsUnlocked, ascension };
 
-    console.log(clicker);
     for (i in clicker.upgrades) {
 
         updateUI(i);
@@ -15,44 +14,13 @@ function ascend() {
 
 function buyPerk(perkObject, perkName) {
 
+    const { materialsPrice } = perkObject;
 
-    // console.log(perkObject);
-    const { materialsPrice, perksRequired } = perkObject;
-
-    console.log("Unlocked: " + perkObject.unlocked)
-
-    if (perkObject.unlocked) return;
+    if (!buyPerkValidation(perkObject)) return; //validate conditions for buying perks
 
     for (material in materialsPrice) {
 
-        if (clicker.materials[material].amount < materialsPrice[material]) {
-
-            console.log("Material validation: " + clicker.materials[material].name + " amount: " + clicker.materials[material].amount);
-            console.log("Perk: " + perkObject.name + " price: " + materialsPrice[material]);
-            return;
-        }
-
-
-        console.log("-------------------------------------------------------");
-    }
-
-
-    for (perkRequired of perksRequired) {
-
-        console.log("Condition validation: " + perkRequired + " " + clicker.ascension.perks[perkRequired].unlocked);
-        console.log("---------------------------------------------------------");
-        if (!clicker.ascension.perks[perkRequired].unlocked) return;
-        console.log("im not returning")
-    }
-
-    for (material in materialsPrice) {
-
-        console.log("Material: ", material)
-        console.log("Materials Price: ", materialsPrice)
-        console.log("Mat: ", clicker.materials[material])
         clicker.materials[material].amount -= materialsPrice[material];
-        console.log("Mat substracted: ", materialsPrice[material])
-        console.log("Mat result: ", clicker.materials[material].amount)
     }
 
     perksEffects[perkName]();
@@ -62,15 +30,41 @@ function buyPerk(perkObject, perkName) {
     perkIcon.classList.add("show-perk-bought");
 }
 
-function perkDebbug() {
+function buyPerkValidation(perkObject) {
 
-    clicker.materials.copper.amount = 100;
-    clicker.materials.silver.amount = 100;
-    clicker.materials.gold.amount = 100;
-    buyPerk(clicker.ascension.perks.silverMastery, "silverMastery");
-    // console.log("Materials: ", clicker.materials);
-    // console.log("Perks: ", clicker.ascension.perks);
-    // console.log("Gold per click: " + clicker.goldPerClick);
+    // console.log(perkObject);
+    const { materialsPrice, perksRequired } = perkObject;
+
+    if (perkObject.unlocked) return false;
+
+    for (material in materialsPrice) {
+
+        if (clicker.materials[material].amount < materialsPrice[material]) {
+
+            return false;
+        }
+    }
+
+    for (perkRequired of perksRequired) {
+
+
+        if (!clicker.ascension.perks[perkRequired].unlocked) return false;
+    }
+
+    return true;
+}
+
+function enableBuyPerkBtn() {
+
+    for (perkKey in clicker.ascension.perks) {
+
+        const perkObject = clicker.ascension.perks[perkKey];
+        if (buyPerkValidation(perkObject)) {
+
+            var perkBtn = document.getElementById(perkObject.buttonId);
+            perkBtn.disabled = false;
+        }
+    }
 }
 
 function showAscensionModal() {

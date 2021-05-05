@@ -168,6 +168,7 @@ function createClickerDefault() {
                         silver: 5,
                     },
                     perksRequired: [],
+                    buttonId: "clickOverdriveBtn",
                 },
                 clickMastery: {
 
@@ -181,6 +182,7 @@ function createClickerDefault() {
                         gold: 1,
                     },
                     perksRequired: [],
+                    buttonId: "clickMasteryBtn",
                 },
                 copperMastery: {
 
@@ -192,6 +194,7 @@ function createClickerDefault() {
                         copper: 20,
                     },
                     perksRequired: ["clickMastery"],
+                    buttonId: "copperMasteryBtn",
                 },
                 silverMastery: {
 
@@ -203,6 +206,7 @@ function createClickerDefault() {
                         silver: 20,
                     },
                     perksRequired: ["clickMastery"],
+                    buttonId: "silverMasteryBtn",
                 },
                 goldMastery: {
 
@@ -214,6 +218,7 @@ function createClickerDefault() {
                         gold: 20,
                     },
                     perksRequired: ["clickOverdrive"],
+                    buttonId: "goldMasteryBtn",
                 },
                 achieveGreatness: {
 
@@ -227,6 +232,7 @@ function createClickerDefault() {
                         gold: 15,
                     },
                     perksRequired: ["silverMastery", "goldMastery"],
+                    buttonId: "achieveGreatnessBtn",
                 },
                 insaneMining: {
 
@@ -240,6 +246,7 @@ function createClickerDefault() {
                         gold: 25,
                     },
                     perksRequired: ["copperMastery"],
+                    buttonId: "insaneMiningBtn",
                 },
             },
         }
@@ -266,16 +273,20 @@ function mine() {
 
 function goldUpdate() {
 
+    var buttonShown = false;
+
     clicker.gold += clicker.goldPerSecond / 20;
 
-    if (clicker.gold == clicker.ascendAmount) { //Unlock ascend and perks buttons
+    if (clicker.gold >= clicker.ascendAmount && !buttonShown) { //Unlock ascend and perks buttons
 
         var ascendBtn = document.getElementById("ascend-btn"),
             perksBtn = document.getElementById("perks-btn");
 
         ascendBtn.classList.add("show-ascen-btn");
         perksBtn.classList.add("show-ascen-btn");
+        buttonShown = true;
     }
+
     goldElem.innerHTML = numberformat.format(Number(String(clicker.gold).split(".")[0]));
 }
 
@@ -310,7 +321,7 @@ function gameReset() {
 
     clicker = createClickerDefault();
 
-    for (i in clicker.upgrades) { //reset ui on upgrades and unlocked atributte
+    for (i in clicker.upgrades) { //reset ui on upgrades and unlocked attribute
 
         updateUI(i);
         clicker.upgrades[i].unlocked = false;
@@ -397,6 +408,7 @@ function gameUpdate() {
         saveGame();
         checkAchievements();
         gatherMaterials();
+        enableBuyPerkBtn();
     }, 50);
 
     loadGame();
