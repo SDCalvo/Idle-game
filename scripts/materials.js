@@ -37,7 +37,7 @@ function materialsDebbug() {
 
         clicker.upgrades[i].mineChance = 0.5;
     }
-    clicker.gold = 10000;
+    clicker.gold = 100000;
     console.log("Materials: ", clicker.materials);
 }
 
