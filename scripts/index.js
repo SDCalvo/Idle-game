@@ -332,6 +332,13 @@ function gameReset() {
 
     ascendBtn.classList.remove("show-ascen-btn");
     perksBtn.classList.remove("show-ascen-btn");
+
+    for (perkKey in clicker.ascension.perks) {
+
+        const perkObject = clicker.ascension.perks[perkKey];
+        var perkBtn = document.getElementById(perkObject.buttonId);
+        perkBtn.disabled = true;
+    }
 }
 
 //Load and Save
