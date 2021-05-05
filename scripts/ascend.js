@@ -75,14 +75,18 @@ function perkDebbug() {
 
 function showAscensionModal() {
 
-    const ascensionModal = document.getElementById("ascensionModal");
+    const ascensionModal = document.getElementById("ascensionModal"),
+        ascenModalHeader = document.getElementById("ascenModalHeader");
     ascensionModal.classList.add('show-ascen-modal');
+    ascenModalHeader.classList.add('show-ascen-modal');
 }
 
 function closeAscensionModal() {
 
-    const ascensionModal = document.getElementById("ascensionModal");
+    const ascensionModal = document.getElementById("ascensionModal"),
+        ascenModalHeader = document.getElementById("ascenModalHeader");
     ascensionModal.classList.remove('show-ascen-modal');
+    ascenModalHeader.classList.remove('show-ascen-modal');
 }
 
 //perksFunctions

@@ -310,11 +310,17 @@ function gameReset() {
 
     clicker = createClickerDefault();
 
-    for (i in clicker.upgrades) {
+    for (i in clicker.upgrades) { //reset ui on upgrades and unlocked atributte
 
         updateUI(i);
         clicker.upgrades[i].unlocked = false;
     }
+
+    var ascendBtn = document.getElementById("ascend-btn"), //reset ascension and perks buttons
+        perksBtn = document.getElementById("perks-btn");
+
+    ascendBtn.classList.remove("show-ascen-btn");
+    perksBtn.classList.remove("show-ascen-btn");
 }
 
 //Load and Save

@@ -617,12 +617,14 @@ button.btn-sheen:active::after {
     height: 100%;
     z-index: 1;
     transform: scale(0);
+    opacity: 0;
     overflow: scroll;
     transition: all 300ms;
 }
 
 .show-ascen-modal {
     transform: scale(1) !important;
+    opacity: 1 !important;
 }
 
 .ascension-modal::-webkit-scrollbar {
@@ -631,6 +633,7 @@ button.btn-sheen:active::after {
 
 .desired-width {
     width: 1920px;
+    position: relative;
 }
 
 .perkContainer {
@@ -779,39 +782,39 @@ button.btn-sheen:active::after {
 }
 
 .perk-line-one {
-    top: 250px;
-    left: 450px;
+    top: 200px;
+    left: 400px;
     transform: rotate(20deg);
 }
 
 .perk-line-two {
-    top: 250px;
-    right: 700px;
+    top: 80px;
+    right: 695px;
     height: 550px !important;
     transform: rotate(49deg);
 }
 
 .perk-line-three {
-    top: 250px;
+    top: 180px;
     right: 400px;
     transform: rotate(-25deg);
 }
 
 .perk-line-four {
-    top: 800px;
-    left: 430px;
+    top: 650px;
+    left: 420px;
     transform: rotate(-15deg);
 }
 
 .perk-line-five {
-    top: 700px;
+    top: 550px;
     right: 1200px;
     height: 550px !important;
     transform: rotate(45deg);
 }
 
 .perk-line-six {
-    top: 700px;
+    top: 600px;
     right: 350px;
     transform: rotate(15deg);
 }
@@ -852,4 +855,15 @@ button.btn-sheen:active::after {
 .show-ascen-btn {
     display: inline-block !important;
     animation: perk-bought 300ms ease-in;
+}
+
+.ascen-modal-header {
+    transform: scale(0);
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
+
+.show-ascen-modal {
+    transform: scale(1) !important;
+    opacity: 1 !important;
 }
