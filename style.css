@@ -883,14 +883,24 @@ button.btn-sheen:active::after {
 }
 
 .config-modal {
+    position: absolute;
+    top: 15%;
+    z-index: 2 !important;
+    right: 1%;
     border: 3px solid var(--color1);
     z-index: -2;
+    transform: scale(0);
+    transition: all 300ms ease-in-out;
+}
+
+.config-modal-show {
+    transform: scale(1) !important;
 }
 
 .config-close-btn {
     border: 3px solid var(--color1) !important;
     top: -15px;
-    right: -40px;
+    left: -16px;
     border-radius: 50% !important;
     width: 15px !important;
     height: 30px !important;
